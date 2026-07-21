@@ -421,68 +421,7 @@
         </div>
         <p class="section-note">각 항목의 “Case study”를 펼치면<br/>담당 기능·의사결정·트러블슈팅을 확인할 수 있습니다.</p>
       </div>
-      <!--
-  [비공개 처리 안내]
-  아래 "AI 기반 보행 재활 로봇" 프로젝트는 진행 중인 산학과제(상명대학교 x 큐렉소)로,
-  아직 정식 종료 및 공개 승인 전이라 임시로 숨겨둔 상태입니다.
-  공개해도 된다는 확인을 받으면, 이 프로젝트를 감싸고 있는 주석 처리만 해제하면 바로 다시 노출됩니다.
-
-  <article class="project reveal" id="project-01">
-    <div class="project-head">
-      <span class="project-num">01</span>
-      <div class="project-headtext">
-        <p class="eyebrow">AI Engineering</p>
-        <h3 class="project-title">AI 기반 보행 재활 로봇의 환자 맞춤형 훈련 시스템 개발</h3>
-        <p class="project-meta">2026.04 — 진행 중 · 산학과제 · 상명대학교 × 큐렉소㈜</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">MWGT (Transformer)</span><span class="chip">CNN+LSTM/TCN</span><span class="chip">GPR / Bayesian Optimization</span><span class="chip">rPPG</span></div>
-      </div>
-    </div>
-    <p class="project-overview">보행 재활 로봇(Morning Walk)의 훈련 파라미터가 치료사의 경험적 판단에만 의존해 수동 설정되던 문제를 해결하기 위해, GRF·안장·카메라 데이터를 기반으로 환자 맞춤형 파라미터를 추천하고 다음 세션 결과를 예측하는 AI 시스템을 설계·개발했습니다.</p>
-    <details class="case-toggle">
-      <summary>Case study 자세히 보기<span class="chev">→</span></summary>
-      
-    <div class="case">
-      <div class="case-col">
-        <h4 class="case-h">담당 기능</h4>
-        <ul class="case-list"><li>규칙 기반 파라미터 추천 모델(Rule-based Model 2) 설계 및 구현</li><li>결과 분석 및 예측 모델(Model 4) 설계 및 구현</li><li>멀티모달 아키텍처 설계 — 모달리티 인코더, 조건부 카메라 슬롯, 퓨전 구조</li></ul>
-        <h4 class="case-h" style="margin-top:1.6rem;">핵심 성과</h4><ul class="case-list"><li><strong>파라미터 추천</strong> — Gutenberg Gait DB(350명·8,819 trial) 기반 정상 파형 대비 오차를 정량화해 Cadence·Step Length·Saddle Height를 자동 추천하는 5단계 규칙 기반 파이프라인 구축</li><li><strong>결과 분석 · 예측</strong> — Mean/Diff GRF + 1D-CNN + LSTM으로 다음 세션 RMSE·SI·Timing·Distance 예측(환자 301명·세션 7,409개). Feature 기반 대비 MAE 3.6%↓, SI MAE 4.1%↓</li><li><strong>멀티모달</strong> — GRF·안장·카메라(표정+rPPG / 트렁크 틀어짐)를 슬라이딩 윈도우로 동기화, 크로스모달 트랜스포머로 융합해 환자 상태를 실시간 추정하는 아키텍처 설계</li></ul>
-      </div>
-      <div class="case-col">
-        <h4 class="case-h">기술적 의사결정</h4>
-        <div class="dt-grid">
-        <div class="dt-card">
-          <p class="dt-q">파라미터 추천 모델링 방향</p>
-          <p class="dt-a"><span class="dt-tag">결정</span>치료사 라벨 없이 학습 가능한 GPR 기반 Conditional GRF Reference Model + Bayesian Optimization으로 피벗</p>
-          <p class="dt-w"><span class="dt-tag alt">이유</span>XGBoost/LSTM/TCN 예측 방식이 사실상 규칙 기반에 불과함을 인식, 라벨 확보 없이 학습 가능한 구조가 필요</p>
-        </div>
-        <div class="dt-card">
-          <p class="dt-q">파형 인코더 — CNN vs TCN</p>
-          <p class="dt-a"><span class="dt-tag">결정</span>CNN 채택 (MAE 4.236 · SI MAE 10.499 · 학습 55.8초)</p>
-          <p class="dt-w"><span class="dt-tag alt">이유</span>TCN은 학습 시간이 약 11배 더 들면서도 지표 개선이 없어 성능 이득 없이 계산량만 증가</p>
-        </div>
-        <div class="dt-card">
-          <p class="dt-q">카메라 모달리티 설계</p>
-          <p class="dt-a"><span class="dt-tag">결정</span>로봇 버전에 따라 역할이 바뀌는 단일 조건부 슬롯 + modality-type 임베딩</p>
-          <p class="dt-w"><span class="dt-tag alt">이유</span>실제 디바이스는 카메라 1대만 존재하는 물리적 제약을 아키텍처에 반영</p>
-        </div></div>
-        <h4 class="case-h" style="margin-top:1.6rem;">트러블슈팅</h4>
-        <div class="dt-grid">
-        <div class="dt-card">
-          <p class="dt-q">단일 환자(35세션) 학습 시 과적합 발생</p>
-          <p class="dt-a"><span class="dt-tag">해결</span>embed_dim·layers·dropout·lr 조합 4회 실험, dropout 0.3 등 정규화 강화</p>
-          <p class="dt-w"><span class="dt-tag alt">결과</span>최적 설정 확보 후 302명 실제 환자 데이터 기반 본 학습으로 전환</p>
-        </div>
-        <div class="dt-card">
-          <p class="dt-q">방향(호전/유지/악화) 예측 정확도가 기준선 못 넘음</p>
-          <p class="dt-a"><span class="dt-tag">해결</span>방향 예측을 핵심 출력에서 제외, RMSE·SI·Timing·Distance 수치 예측으로 출력 설계 조정</p>
-          <p class="dt-w"><span class="dt-tag alt">결과</span>MAE 4.236 · R² 0.611 확보, 방향 전망은 보조 정보로 제공</p>
-        </div></div>
-      </div>
-    </div>
-    </details>
-  </article>
--->
-
+     
   <article class="project reveal" id="project-01">
     <div class="project-head">
       <span class="project-num">01</span>
