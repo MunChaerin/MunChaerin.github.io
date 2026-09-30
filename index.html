@@ -201,6 +201,28 @@
   .cert-org{margin:.15rem 0 0;font-size:.82rem;color:var(--gray-600);}
   .cert-date{font-family:var(--mono);font-size:.78rem;color:var(--gray-500,#7a7a7a);white-space:nowrap;}
 
+  /* ---------- experience ---------- */
+  .experience-row{
+    display:grid;grid-template-columns:180px 1fr;gap:2.5rem;
+    padding:2rem 0;border-top:1px solid var(--black);border-bottom:1px solid var(--line);
+  }
+  .experience-date{
+    font-family:var(--mono);font-size:.8rem;color:var(--gray-600);margin:.25rem 0 0;
+  }
+  .experience-role{font-size:1.35rem;font-weight:700;margin:0 0 .35rem;}
+  .experience-org{font-family:var(--mono);font-size:.8rem;color:var(--gray-600);margin:0 0 1.1rem;}
+  .experience-summary{max-width:78ch;color:var(--gray-700);margin:0 0 1.1rem;}
+  .experience-list{margin:0;padding-left:1.1rem;color:var(--gray-700);font-size:.92rem;}
+  .experience-list li{margin-bottom:.55rem;}
+  .experience-link{
+    display:inline-block;margin-top:1.1rem;font-family:var(--mono);font-size:.8rem;
+    color:var(--black);text-decoration:none;border-bottom:1px solid var(--black);padding-bottom:.2rem;
+  }
+  @media(max-width:640px){
+    .experience-row{grid-template-columns:1fr;gap:.8rem;}
+    .experience-date{margin:0;}
+  }
+
   /* ---------- projects ---------- */
   .project{padding:3rem 0;border-top:1px solid var(--line);}
   .project:first-child{border-top:none;padding-top:0;}
@@ -301,6 +323,7 @@
     <a href="#top" class="brand">문채린 — 포트폴리오</a>
     <nav class="links">
       <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
       <a href="#work">Work</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -408,6 +431,33 @@
     </div>
     <span class="cert-date">2025.06</span>
   </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Experience</p>
+          <h2 class="section-title">Research Experience</h2>
+        </div>
+        <p class="section-note">데이터 전처리부터 모델 실험,<br/>현장 테스트용 UI까지 연결했습니다.</p>
+      </div>
+      <div class="experience-row reveal">
+        <p class="experience-date">2026.04 — 2026.09</p>
+        <div>
+          <h3 class="experience-role">학부연구생 · 산학협력 과제</h3>
+          <p class="experience-org">상명대학교 · Morning Walk 보행 재활 로봇 환자 맞춤형 AI</p>
+          <p class="experience-summary">보행 재활 로봇의 센서 데이터를 바탕으로 환자별 훈련 파라미터를 추천하고 다음 세션의 보행 추이를 예측하는 AI 기능을 개발했습니다. 얼굴, 심박, 자세, 로봇 데이터를 결합한 멀티모달 분석과 현장 테스트 환경 구성에도 참여했습니다.</p>
+          <ul class="experience-list">
+            <li>환자 302명의 CSV 11,625개를 분석해 세션 순서, 결측치, 비정상 범위와 데이터 품질을 점검하는 전처리 흐름 구성</li>
+            <li>GRF 기반 보행 주기 분리와 101포인트 정규화를 적용하고, 규칙 기반 파이프라인과 TCN·GRU 모델을 설계·비교</li>
+            <li>Streamlit 분석 UI와 TCP/JSON Lines 기반 멀티모달 연동, Windows 현장 테스트용 실행 패키지 제작</li>
+          </ul>
+          <a class="experience-link" href="#project-03">관련 프로젝트 상세 보기 →</a>
         </div>
       </div>
     </div>
