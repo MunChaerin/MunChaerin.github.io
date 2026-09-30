@@ -106,7 +106,7 @@
   .hero h1{
     font-size:clamp(2.8rem,7vw,5.4rem);
     font-weight:800;
-    letter-spacing:-.02em;
+    letter-spacing:0;
     margin:0 0 .6rem;
     line-height:1.02;
   }
@@ -163,7 +163,7 @@
     margin-bottom:2.6rem;gap:1rem;flex-wrap:wrap;
   }
   .section-title{
-    font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.01em;margin:0;
+    font-size:clamp(1.9rem,3.4vw,2.6rem);font-weight:800;letter-spacing:0;margin:0;
   }
   .section-note{
     font-family:var(--mono);font-size:.8rem;color:var(--gray-500,#7a7a7a);max-width:34ch;text-align:right;
@@ -205,11 +205,12 @@
   .project{padding:3rem 0;border-top:1px solid var(--line);}
   .project:first-child{border-top:none;padding-top:0;}
   .project-head{display:flex;gap:1.6rem;align-items:flex-start;margin-bottom:1.1rem;}
+  .project-headtext{min-width:0;}
   .project-num{
     font-family:var(--mono);font-size:1rem;font-weight:600;color:var(--gray-400);
     padding-top:.25rem;min-width:2ch;
   }
-  .project-title{font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:700;margin:.25rem 0 .4rem;letter-spacing:-.01em;}
+  .project-title{font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:700;margin:.25rem 0 .4rem;letter-spacing:0;overflow-wrap:anywhere;}
   .project-meta{font-family:var(--mono);font-size:.78rem;color:var(--gray-500,#7a7a7a);margin:0 0 1rem;}
   .chips{display:flex;flex-wrap:wrap;gap:.5rem;}
   .chip{
@@ -262,7 +263,7 @@
   .contact .eyebrow{color:var(--gray-400);}
   .contact .eyebrow::before{background:var(--gray-600);}
   .contact h2{
-    font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;letter-spacing:-.02em;
+    font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;letter-spacing:0;
     margin:0 0 1.6rem;line-height:1.08;
   }
   .contact-links{display:flex;flex-wrap:wrap;gap:1rem 2.4rem;margin-top:2rem;}
@@ -319,8 +320,8 @@
           <p class="role">AI Engineer&nbsp;&nbsp;·&nbsp;&nbsp;Backend Developer</p>
           <p class="bio">
             성실하게 배우고, 트렌드는 발 빠르게. 기본기는 꾸준히 쌓고 새로운 도구와 트렌드는
-            가장 먼저 써보고 적용합니다. AI 모델링부터 백엔드 아키텍처·배포까지,
-            아이디어가 실제로 동작하는 서비스가 되기까지의 전 과정에 관심이 많습니다.
+            가장 먼저 써보고 적용합니다. AI 모델링부터 프론트엔드, 백엔드, 클라우드 운영까지,
+            아이디어가 실제로 동작하고 안정적으로 운영되는 서비스가 되기까지의 전 과정에 관심이 많습니다.
           </p>
           <div class="hero-cta">
             <a class="btn solid" href="#work">프로젝트 보기</a>
@@ -328,7 +329,7 @@
             <a class="btn" href="https://velog.io/@020429mun" target="_blank" rel="noopener">Velog</a>
           </div>
           <div class="factstrip">
-            <span><b>4</b> Projects</span>
+            <span><b>5</b> Projects</span>
             <span><b>3</b> Certifications</span>
             <span><b>GPA</b> 4.13 / 4.5 · 전공 4.14</span>
             <span>상명대학교 휴먼AI공학전공</span>
@@ -364,7 +365,7 @@
   </div>
   <div class="skill-row">
     <span class="skill-label">AI / ML</span>
-    <span class="skill-items">PyTorch · Transformer (MWGT) · CNN+LSTM/TCN · GPR / Bayesian Optimization · KLUE-RoBERTa · RAG</span>
+    <span class="skill-items">PyTorch · TCN / GRU / LSTM · Multimodal AI · KLUE-RoBERTa · RAG</span>
   </div>
   <div class="skill-row">
     <span class="skill-label">Backend</span>
@@ -372,11 +373,11 @@
   </div>
   <div class="skill-row">
     <span class="skill-label">Database</span>
-    <span class="skill-items">PostgreSQL · MySQL · Redis</span>
+    <span class="skill-items">PostgreSQL · MySQL · Redis · ChromaDB</span>
   </div>
   <div class="skill-row">
     <span class="skill-label">Infra / Cloud</span>
-    <span class="skill-items">AWS (EC2·S3·RDS·Cloud9) · Vector DB</span>
+    <span class="skill-items">AWS (EC2 · RDS · S3 · IAM) · Docker · GitHub Actions · Nginx / Caddy</span>
   </div>
   <div class="skill-row">
     <span class="skill-label">Auth / Etc.</span>
@@ -429,18 +430,18 @@
       <div class="project-headtext">
         <p class="eyebrow">Frontend · Backend</p>
         <h3 class="project-title">부여 역사 여행 오디오 가이드 앱, TimeTrip</h3>
-        <p class="project-meta">2026.03 — 진행 중 · 3인 팀 · 2026년 관광데이터 활용 공모전</p>
-        <div class="chips"><span class="chip">React Native / Expo</span><span class="chip">Spring Boot</span><span class="chip">AWS</span><span class="chip">Tour API</span></div>
+        <p class="project-meta">2026.03 — 진행 중 · 3인 팀 · Google Play Store 최종 검토 중</p>
+        <div class="chips"><span class="chip">React Native / Expo</span><span class="chip">Spring Boot</span><span class="chip">AWS</span><span class="chip">Docker</span><span class="chip">GitHub Actions</span><span class="chip">Tour API</span></div>
       </div>
     </div>
-    <p class="project-overview">유네스코 세계문화유산이 밀집된 부여 지역을 오디오 가이드와 AR 타임슬립 카메라로 체험하는 역사 관광 앱. 프론트엔드 화면 구현과 Spring Boot 백엔드 API 연동에 함께 참여하며 지도, 도감, 오디오 가이드, 셀카/앨범 기능의 사용자 흐름을 구현했습니다.</p>
+    <p class="project-overview">유네스코 세계문화유산이 밀집된 부여 지역을 오디오 가이드와 AR 타임슬립 카메라로 체험하는 역사 관광 앱. 팀장으로서 React Native 화면과 Spring Boot API를 연결하고, AWS 운영 인프라와 자동 배포 환경까지 구성해 사용자 기능을 실제 배포 환경에서 검증했습니다.</p>
     <details class="case-toggle">
       <summary>Case study 자세히 보기<span class="chev">→</span></summary>
       
     <div class="case">
       <div class="case-col">
         <h4 class="case-h">담당 기능</h4>
-        <ul class="case-list"><li>React Native/Expo 기반 지도, 도감, 오디오 가이드, 셀카/앨범 화면 구현</li><li>Spring Boot API와 연동해 스팟, 스토리, 오디오, 컬렉션 아이템, 셀카 저장 흐름 구성</li><li>장소 타입과 SPECIAL 여부에 따른 오디오 재생 및 AR 카메라 이동 분기 구현</li><li>운영 API 응답, 앱 로그, DB 상태를 비교하며 화면 오류와 데이터 불일치 문제 분석</li></ul>
+        <ul class="case-list"><li>React Native/Expo 기반 지도, 도감, 오디오 가이드, 셀카/앨범 화면 구현</li><li>Spring Boot API와 연동해 스팟, 스토리, 오디오, 컬렉션 아이템, 셀카 저장 흐름 구성</li><li>장소 타입과 SPECIAL 여부에 따른 오디오 재생 및 AR 카메라 이동 분기 구현</li><li>AWS EC2, RDS PostgreSQL, S3, IAM 기반 운영 인프라와 Docker Compose 배포 환경 구성</li><li>GitHub Actions 자동 배포, Caddy HTTPS 프록시, 운영 로그 및 컨테이너 상태 점검</li><li>운영 API 응답, 앱 로그, DB 상태를 비교하며 화면 오류와 데이터 불일치 문제 분석</li></ul>
         
       </div>
       <div class="case-col">
@@ -457,6 +458,10 @@
           <p class="dt-q">AR/도감 획득 흐름 분리</p>
           <p class="dt-a"><span class="dt-tag">결정</span>AR Camera는 오디오 완청 후 획득 처리, Collection 화면은 획득 여부 조회와 리뷰 역할로 분리</p>
           <p class="dt-w"><span class="dt-tag alt">이유</span>도감 상세에서 acquire를 반복 호출하면 미획득 403, 중복 획득 409가 발생할 수 있어 화면 책임을 명확히 나눔</p>
+        </div><div class="dt-card">
+          <p class="dt-q">운영 인프라 권한과 네트워크 최소화</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>EC2에는 Access Key 대신 IAM Role을 연결하고, Spring Boot·Redis·RDS는 필요한 내부 네트워크와 보안 그룹에서만 접근하도록 구성</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>운영 자격 증명의 노출 위험을 줄이고, 애플리케이션과 데이터 저장소의 외부 노출 범위를 최소화하기 위해</p>
         </div></div>
         <h4 class="case-h" style="margin-top:1.6rem;">트러블슈팅</h4>
         <div class="dt-grid"><div class="dt-card">
@@ -475,6 +480,14 @@
           <p class="dt-q">Android 공유 시 이미지가 아닌 텍스트만 공유</p>
           <p class="dt-a"><span class="dt-tag">해결</span>expo-sharing 네이티브 모듈을 Dev Client에 재빌드하고, 합성 이미지 URI를 공유 payload로 전달</p>
           <p class="dt-w"><span class="dt-tag alt">결과</span>Android 공유 시트에서 실제 셀카 합성 이미지를 공유할 수 있게 됨</p>
+        </div><div class="dt-card">
+          <p class="dt-q">EC2는 실행 중이지만 SSH와 API가 응답하지 않음</p>
+          <p class="dt-a"><span class="dt-tag">해결</span>커널·컨테이너 로그에서 OOM Killer가 Java 프로세스를 종료한 사실을 확인하고, 인스턴스 사양 조정과 2GB Swap 추가</p>
+          <p class="dt-w"><span class="dt-tag alt">결과</span>프로세스·컨테이너·SSH·API를 순서대로 검증하고 실제 앱의 지도·오디오 기능이 운영 API와 다시 연결되는지 확인</p>
+        </div><div class="dt-card">
+          <p class="dt-q">AWS 계정과 운영 데이터 이전</p>
+          <p class="dt-a"><span class="dt-tag">해결</span>EC2·RDS·S3·IAM·DNS·CI/CD를 신규 팀 계정으로 이전하고, pg_dump/pg_restore와 S3 동기화 후 PK·FK·행 수·파일 접근을 검증</p>
+          <p class="dt-w"><span class="dt-tag alt">결과</span>기존 API 도메인을 유지한 채 신규 인프라에서 로그인, 오디오, 도감, 셀카 기능을 점검하고 롤백용 기존 RDS를 일정 기간 보존</p>
         </div></div>
       </div>
     </div>
@@ -488,17 +501,17 @@
         <p class="eyebrow">AI · Frontend · Backend</p>
         <h3 class="project-title">웰니스 창업 아이디어 진단 및 창업제안서 자동 작성 플랫폼, PREP</h3>
         <p class="project-meta">2026.03 — 2026.11 예정 · 5인 팀 프로젝트</p>
-        <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">RAG / Vector DB</span></div>
+        <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">ChromaDB</span><span class="chip">AWS / Docker</span><span class="chip">RAG</span></div>
       </div>
     </div>
-    <p class="project-overview">헬스케어·웰니스 창업 아이디어의 규제·데이터 활용성·시장성을 진단하고, 근거 기반 결과 리포트와 창업제안서를 자동 생성하는 플랫폼. React 분석 리포트 화면과 공통 API 연동, FastAPI 기반 RAG 조회 흐름 설계에 함께 참여했습니다.</p>
+    <p class="project-overview">헬스케어·웰니스 창업 아이디어의 규제·데이터 활용성·시장성을 진단하고, 근거 기반 결과 리포트와 창업제안서를 자동 생성하는 플랫폼. React 리포트 화면부터 RAG 데이터 구조와 검색 API, AWS 운영 배포까지 담당하며 AI 결과가 출처와 함께 전달되는 흐름을 구현했습니다.</p>
     <details class="case-toggle">
       <summary>Case study 자세히 보기<span class="chev">→</span></summary>
       
     <div class="case">
       <div class="case-col">
         <h4 class="case-h">담당 기능</h4>
-        <ul class="case-list"><li>React 분석 리포트 화면, 공통 API 클라이언트, TypeScript 타입 및 에러 처리 유틸 구현</li><li>GATE PASS/FAIL 결과에 따라 규제 위험도, 데이터 확보 가능성, 시장성, BM 추천 섹션을 조건부 렌더링</li><li>법령/가이드라인 근거 문서를 evidence chunk로 정제하고 RAG 검색 API 응답 구조 설계</li><li>Vercel 배포, CORS, 모델 artifact 반영, API 응답 변경 이슈를 백엔드 팀과 조율하며 MVP 개발 지원</li></ul>
+        <ul class="case-list"><li>React 분석 리포트 화면, 공통 API 클라이언트, TypeScript 타입 및 에러 처리 유틸 구현</li><li>GATE PASS/FAIL 결과에 따라 규제 위험도, 데이터 확보 가능성, 시장성, BM 추천 섹션을 조건부 렌더링</li><li>39개 법령·가이드라인 문서를 413개 evidence chunk로 정제하고 메타데이터·검색 API 구조 설계</li><li>AWS EC2, RDS PostgreSQL, Redis, ChromaDB, Nginx 기반 운영 환경과 HTTPS 도메인 구성</li><li>GitHub Actions에서 ONNX 모델 배포, Alembic migration, health check, API smoke test를 수행하는 자동 배포 흐름 구성</li><li>Vercel CORS, 모델 artifact, Docker·RDS·DNS 연결 오류를 로그와 배포 상태로 구분해 대응</li></ul>
         
       </div>
       <div class="case-col">
@@ -515,6 +528,14 @@
           <p class="dt-q">RAG 저장소 제약 대응</p>
           <p class="dt-a"><span class="dt-tag">결정</span>ChromaDB가 None metadata를 저장하지 못하는 제약을 고려해 write/read 양쪽에서 sentinel 값을 관리</p>
           <p class="dt-w"><span class="dt-tag alt">이유</span>페이지 정보가 없는 evidence chunk가 API 응답에서 -1이 아니라 null로 표현되어야 FE와 사용자에게 자연스럽기 때문</p>
+        </div><div class="dt-card">
+          <p class="dt-q">긴 원문 청크의 임베딩 구조</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>6,000자를 넘는 원문은 고유 ID를 가진 하위 청크로 분할하고, parent_chunk_id·part index·part count를 메타데이터에 보존</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>임베딩 입력 크기를 제한하면서도 검색 결과를 원문 청크와 출처·페이지 정보에 다시 연결하기 위해</p>
+        </div><div class="dt-card">
+          <p class="dt-q">관계형 원문과 벡터 인덱스 분리</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>PostgreSQL을 원문·메타데이터의 기준 저장소로 두고 ChromaDB에는 재생성 가능한 임베딩 벡터를 저장</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>일반 데이터와 벡터 검색의 역할을 분리하고, 원문 청크로부터 벡터 인덱스를 다시 만들 수 있도록 하기 위해</p>
         </div></div>
         <h4 class="case-h" style="margin-top:1.6rem;">트러블슈팅</h4>
         <div class="dt-grid"><div class="dt-card">
@@ -541,6 +562,10 @@
           <p class="dt-q">PDF 저장 시 스크롤 영역 내용 누락</p>
           <p class="dt-a"><span class="dt-tag">해결</span>인쇄/PDF 저장 모드에서는 탭과 스크롤 UI 대신 전체 리포트 섹션이 펼쳐지도록 인쇄용 렌더링 조건 조정</p>
           <p class="dt-w"><span class="dt-tag alt">결과</span>특정 탭의 현재 스크롤 위치만 저장되는 문제를 줄이고 리포트 전체 저장 흐름 개선</p>
+        </div><div class="dt-card">
+          <p class="dt-q">운영 RAG 검색 품질 파일럿</p>
+          <p class="dt-a"><span class="dt-tag">검증</span>실제 규제 질문 10개를 top_k=5 조건으로 조회해 응답 시간, 정답 문서·조항 적중, 출처·페이지 메타데이터를 분리 평가</p>
+          <p class="dt-w"><span class="dt-tag alt">결과</span>응답 시간 중앙값 0.207초, 문서 적중률 60%, 조항 적중률 50%를 확인하고 구판 우선 노출과 미청킹 문서를 다음 개선 과제로 도출</p>
         </div></div>
       </div>
     </div>
@@ -550,6 +575,55 @@
   <article class="project reveal" id="project-03">
     <div class="project-head">
       <span class="project-num">03</span>
+      <div class="project-headtext">
+        <p class="eyebrow">AI Research · Data Pipeline</p>
+        <h3 class="project-title">Morning Walk 보행 재활 로봇 환자 맞춤형 AI</h3>
+        <p class="project-meta">2026.04 — 2026.09 · 학부연구생 산학협력 과제</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TCN / GRU</span><span class="chip">Streamlit</span><span class="chip">Multimodal AI</span><span class="chip">TCP / JSON</span></div>
+      </div>
+    </div>
+    <p class="project-overview">보행 재활 로봇의 센서 데이터를 분석해 환자별 훈련 파라미터를 추천하고, 여러 세션의 추이를 예측하며, 얼굴·심박·자세·로봇 데이터를 결합해 훈련 중 부하와 위험 상태를 보여주는 산학협력 프로젝트. 원시 데이터 전처리부터 모델 실험, 분석 UI와 현장 테스트용 실행 패키지까지 연결했습니다.</p>
+    <details class="case-toggle">
+      <summary>Case study 자세히 보기<span class="chev">→</span></summary>
+
+    <div class="case">
+      <div class="case-col">
+        <h4 class="case-h">담당 기능</h4>
+        <ul class="case-list"><li>환자 302명, CSV 11,625개 규모의 보행 데이터에서 세션 순서·결측치·비정상 범위·품질 플래그를 점검하는 전처리 흐름 구성</li><li>GRF 데이터를 gait cycle로 분리하고 101포인트 정규화, 평균 파형, RMSE·Peak·Valley·Timing·좌우 대칭 지표 추출</li><li>훈련 파라미터 추천을 위한 M2 룰베이스 파이프라인과 Streamlit 분석 UI 구현</li><li>TCN과 GRU 표현을 결합해 다음 세션의 보행 추이를 예측하고 confidence와 품질 경고를 함께 출력하는 M4 모델 실험</li><li>얼굴·rPPG·후방 자세·로봇 수치를 step 단위로 맞추는 멀티모달 fusion과 TCP JSON Lines 연동 구조 구현</li><li>CSV replay 테스트, Windows 실행 패키지, 사용자 매뉴얼과 성능 비교 보고서 제작</li></ul>
+      </div>
+      <div class="case-col">
+        <h4 class="case-h">기술적 의사결정</h4>
+        <div class="dt-grid"><div class="dt-card">
+          <p class="dt-q">M2 추천 로직을 룰베이스로 분리</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>실제 데이터에 일부 훈련 파라미터 컬럼과 학습 라벨이 부족한 구간은 딥러닝 대신 기준 파형·BWS·대칭 지표 기반 룰로 추천</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>제한된 데이터에서 근거 없는 예측을 만들기보다 로봇이 실제 조절할 수 있는 범위와 판단 근거를 명시하기 위해</p>
+        </div><div class="dt-card">
+          <p class="dt-q">환자 극단값을 삭제하지 않고 품질 플래그로 관리</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>결측·음수 GRF·측정 오류는 구분하되 환자 상태일 수 있는 극단값은 보존하고 별도 품질 플래그를 부여</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>실제 이상 보행을 단순 이상치로 제거해 환자 특성을 잃지 않도록 하기 위해</p>
+        </div><div class="dt-card">
+          <p class="dt-q">확정 진단이 아닌 추이 보조 모델로 정의</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>reference distance 기반 pseudo-label의 한계를 명시하고 confidence와 coverage를 함께 제공</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>임상 gold label이 부족한 상태에서 모든 결과를 동일한 확신도로 제시하지 않기 위해</p>
+        </div></div>
+        <h4 class="case-h" style="margin-top:1.6rem;">검증 및 확장</h4>
+        <div class="dt-grid"><div class="dt-card">
+          <p class="dt-q">환자 세션 추이 모델 성능 비교</p>
+          <p class="dt-a"><span class="dt-tag">검증</span>TCN·GRU 기반 모델의 전체 Accuracy 76.73%, Balanced Accuracy 70.10%를 확인하고 confidence 구간별 coverage를 추가 분석</p>
+          <p class="dt-w"><span class="dt-tag alt">결과</span>confidence 0.60 이상에서는 Coverage 69.53%, Accuracy 89.82%로, 전체 예측과 고신뢰 예측을 구분해 해석</p>
+        </div><div class="dt-card">
+          <p class="dt-q">멀티모달 실시간 연동</p>
+          <p class="dt-a"><span class="dt-tag">구현</span>로봇 numeric, rPPG, 전·후방 카메라 결과를 같은 step으로 정렬하고 TCP 서버에서 상태·부하·피로·위험 점수를 통합</p>
+          <p class="dt-w"><span class="dt-tag alt">결과</span>일부 모듈이 누락돼도 실행을 계속하는 예외 처리와 CSV replay 도구를 구성해 현장 연동 전 반복 검증 가능</p>
+        </div></div>
+      </div>
+    </div>
+    </details>
+  </article>
+
+  <article class="project reveal" id="project-04">
+    <div class="project-head">
+      <span class="project-num">04</span>
       <div class="project-headtext">
         <p class="eyebrow">Backend</p>
         <h3 class="project-title">우리의 하루를 더 특별하게, 누피(NUPI)</h3>
@@ -585,9 +659,9 @@
     </details>
   </article>
 
-  <article class="project reveal" id="project-04">
+  <article class="project reveal" id="project-05">
     <div class="project-head">
-      <span class="project-num">04</span>
+      <span class="project-num">05</span>
       <div class="project-headtext">
         <p class="eyebrow">Backend</p>
         <h3 class="project-title">디지털 타임캡슐 서비스, Echo</h3>
