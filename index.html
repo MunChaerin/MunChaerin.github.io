@@ -352,7 +352,7 @@
             <a class="btn" href="https://velog.io/@020429mun" target="_blank" rel="noopener">Velog</a>
           </div>
           <div class="factstrip">
-            <span><b>5</b> Projects</span>
+            <span><b>6</b> Projects</span>
             <span><b>3</b> Certifications</span>
             <span><b>GPA</b> 4.13 / 4.5 · 전공 4.14</span>
             <span>상명대학교 휴먼AI공학전공</span>
@@ -384,11 +384,11 @@
   </div>
   <div class="skill-row">
     <span class="skill-label">Frontend</span>
-    <span class="skill-items">React · TypeScript · React Native · Expo</span>
+    <span class="skill-items">React · Next.js · TypeScript · React Native · Expo</span>
   </div>
   <div class="skill-row">
     <span class="skill-label">AI / ML</span>
-    <span class="skill-items">PyTorch · TCN / GRU / LSTM · Multimodal AI · KLUE-RoBERTa · RAG</span>
+    <span class="skill-items">PyTorch · Deep Learning · Multimodal AI · KLUE-RoBERTa · RAG</span>
   </div>
   <div class="skill-row">
     <span class="skill-label">Backend</span>
@@ -404,7 +404,7 @@
   </div>
   <div class="skill-row">
     <span class="skill-label">Auth / Etc.</span>
-    <span class="skill-items">JWT · OpenAI GPT API · FCM</span>
+    <span class="skill-items">JWT · OpenAI GPT API · MediaPipe · Web Speech API · FCM</span>
   </div>
         </div>
         <div class="cert-block">
@@ -450,14 +450,14 @@
         <p class="experience-date">2026.04 — 2026.09</p>
         <div>
           <h3 class="experience-role">학부연구생 · 산학협력 과제</h3>
-          <p class="experience-org">상명대학교 · 보행 재활 로봇 환자 맞춤형 AI</p>
-          <p class="experience-summary">보행 재활 로봇의 센서 데이터를 바탕으로 환자별 훈련 파라미터를 추천하고 다음 세션의 보행 추이를 예측하는 AI 기능을 개발했습니다. 얼굴, 심박, 자세, 로봇 데이터를 결합한 멀티모달 분석과 현장 테스트 환경 구성에도 참여했습니다.</p>
+          <p class="experience-org">상명대학교 · 보행 재활 로봇 AI 산학협력 과제</p>
+          <p class="experience-summary">보행 재활 로봇에서 수집되는 데이터를 분석해 사용자 맞춤형 훈련을 보조하는 AI 기능을 연구했습니다. 데이터 전처리부터 모델 실험, 결과 확인용 UI와 검증 환경 구성까지 전 과정에 참여했습니다.</p>
           <ul class="experience-list">
-            <li>환자 302명의 CSV 11,625개를 분석해 세션 순서, 결측치, 비정상 범위와 데이터 품질을 점검하는 전처리 흐름 구성</li>
-            <li>GRF 기반 보행 주기 분리와 101포인트 정규화를 적용하고, 규칙 기반 파이프라인과 TCN·GRU 모델을 설계·비교</li>
-            <li>Streamlit 분석 UI와 TCP/JSON Lines 기반 멀티모달 연동, Windows 현장 테스트용 실행 패키지 제작</li>
+            <li>비식별 센서 데이터의 결측치와 품질을 점검하는 전처리 파이프라인 구성</li>
+            <li>사용자별 보행 변화 분석을 위한 규칙 기반 방식과 딥러닝 모델을 설계하고 결과 비교</li>
+            <li>연구 결과를 확인할 수 있는 분석 UI와 현장 검증 환경 구성</li>
           </ul>
-          <a class="experience-link" href="#project-03">관련 프로젝트 상세 보기 →</a>
+          <a class="experience-link" href="#project-04">관련 프로젝트 상세 보기 →</a>
         </div>
       </div>
     </div>
@@ -626,54 +626,106 @@
     <div class="project-head">
       <span class="project-num">03</span>
       <div class="project-headtext">
-        <p class="eyebrow">AI Research · Data Pipeline</p>
-        <h3 class="project-title">보행 재활 로봇 환자 맞춤형 AI</h3>
-        <p class="project-meta">2026.04 — 2026.09 · 학부연구생 산학협력 과제</p>
-        <div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">TCN / GRU</span><span class="chip">Streamlit</span><span class="chip">Multimodal AI</span><span class="chip">TCP / JSON</span></div>
+        <p class="eyebrow">AI · Frontend · Healthcare</p>
+        <h3 class="project-title">고령 환자와 의료진을 연결하는 AI 헬스케어 서비스, BioHealth CareLink</h3>
+        <p class="project-meta">2026.09 — 진행 중 · 팀 프로젝트 · 팀장</p>
+        <div class="chips"><span class="chip">Next.js 15</span><span class="chip">React 19</span><span class="chip">TypeScript</span><span class="chip">OpenAI API</span><span class="chip">MediaPipe</span><span class="chip">Web Speech API</span><span class="chip">Vitest</span></div>
       </div>
     </div>
-    <p class="project-overview">보행 재활 로봇의 센서 데이터를 분석해 환자별 훈련 파라미터를 추천하고, 여러 세션의 추이를 예측하며, 얼굴·심박·자세·로봇 데이터를 결합해 훈련 중 부하와 위험 상태를 보여주는 산학협력 프로젝트. 원시 데이터 전처리부터 모델 실험, 분석 UI와 현장 테스트용 실행 패키지까지 연결했습니다.</p>
+    <p class="project-overview">요양시설 고령 환자와 AI 챗봇의 대화를 통해 증상과 생활 상태를 수집하고, 카메라 기반 관찰 정보와 함께 의료진의 SOAP 기록 작성을 보조하는 서비스. 환자용 챗봇과 의료진 대시보드, 한국어·일본어 음성 기능을 구현해 양방향 소통 흐름을 연결했습니다.</p>
     <details class="case-toggle">
       <summary>Case study 자세히 보기<span class="chev">→</span></summary>
-
-    <div class="case">
-      <div class="case-col">
-        <h4 class="case-h">담당 기능</h4>
-        <ul class="case-list"><li>환자 302명, CSV 11,625개 규모의 보행 데이터에서 세션 순서·결측치·비정상 범위·품질 플래그를 점검하는 전처리 흐름 구성</li><li>GRF 데이터를 gait cycle로 분리하고 101포인트 정규화, 평균 파형, RMSE·Peak·Valley·Timing·좌우 대칭 지표 추출</li><li>훈련 파라미터 추천을 위한 M2 룰베이스 파이프라인과 Streamlit 분석 UI 구현</li><li>TCN과 GRU 표현을 결합해 다음 세션의 보행 추이를 예측하고 confidence와 품질 경고를 함께 출력하는 M4 모델 실험</li><li>얼굴·rPPG·후방 자세·로봇 수치를 step 단위로 맞추는 멀티모달 fusion과 TCP JSON Lines 연동 구조 구현</li><li>CSV replay 테스트, Windows 실행 패키지, 사용자 매뉴얼과 성능 비교 보고서 제작</li></ul>
+      <div class="case">
+        <div class="case-col">
+          <h4 class="case-h">담당 기능</h4>
+          <ul class="case-list"><li>팀장으로서 서비스 흐름과 AI 챗봇의 상태 기반 대화 구조 설계</li><li>Next.js와 TypeScript 기반 환자용 챗봇 UI 및 의료진 대시보드 개발</li><li>OpenAI API를 연동해 환자 대화 요약과 의료진 검토용 SOAP 초안 생성</li><li>한국어·일본어 STT/TTS와 MediaPipe 기반 표정·입모양 관찰 기능 통합</li><li>환자별 대화·카메라·호출 상태 분리와 의료진 호출·쉬운 설명 전달 흐름 구현</li><li>Issue, Branch, Pull Request, Review 순서의 협업 규칙과 GitHub 브랜치 구조 관리</li></ul>
+        </div>
+        <div class="case-col">
+          <h4 class="case-h">기술적 의사결정</h4>
+          <div class="dt-grid"><div class="dt-card">
+            <p class="dt-q">안전 신호는 서버에서 다시 검증</p>
+            <p class="dt-a"><span class="dt-tag">결정</span>Provider와 클라이언트 상태에만 의존하지 않고 API 공통 경로에서 위험 키워드와 안전 상태를 재검사</p>
+            <p class="dt-w"><span class="dt-tag alt">이유</span>위험 발화가 감지된 세션에서는 일반 대화보다 의료진 또는 기관의 대응 흐름을 우선하기 위해</p>
+          </div><div class="dt-card">
+            <p class="dt-q">AI 결과는 의료진 검토용 초안으로 제한</p>
+            <p class="dt-a"><span class="dt-tag">결정</span>SOAP 결과를 진단이나 처방이 아닌 의료진이 수정하는 참고 초안으로 설계</p>
+            <p class="dt-w"><span class="dt-tag alt">이유</span>의료 판단과 최종 결정이 의료진에게 있음을 서비스 흐름에서 분명히 하기 위해</p>
+          </div><div class="dt-card">
+            <p class="dt-q">카메라 원본 영상은 브라우저 안에서 처리</p>
+            <p class="dt-a"><span class="dt-tag">결정</span>MediaPipe 분석을 클라이언트에서 수행하고 서버에는 관찰 결과값만 전달</p>
+            <p class="dt-w"><span class="dt-tag alt">이유</span>민감한 영상 원본의 외부 전송을 줄이고 개인정보 노출 범위를 최소화하기 위해</p>
+          </div></div>
+          <h4 class="case-h" style="margin-top:1.6rem;">트러블슈팅 및 검증</h4>
+          <div class="dt-grid"><div class="dt-card">
+            <p class="dt-q">환자별 세션과 API 실패 상태 관리</p>
+            <p class="dt-a"><span class="dt-tag">해결</span>환자 ID를 기준으로 대화·SOAP·카메라·호출 상태를 분리하고, 요청 실패 시 이전 대화 상태로 롤백</p>
+            <p class="dt-w"><span class="dt-tag alt">결과</span>환자 전환과 재시도 과정에서 데이터와 메시지가 섞이거나 중복되는 문제를 방지</p>
+          </div><div class="dt-card">
+            <p class="dt-q">음성 인식 세션 전환 시 UI 상태 충돌</p>
+            <p class="dt-a"><span class="dt-tag">해결</span>이벤트가 발생한 recognition 객체와 현재 객체를 비교해 최신 세션의 이벤트만 반영</p>
+            <p class="dt-w"><span class="dt-tag alt">결과</span>이전 세션의 종료 이벤트가 새 음성 인식 상태를 덮어쓰는 문제를 해결</p>
+          </div><div class="dt-card">
+            <p class="dt-q">자동 테스트와 타입 검증</p>
+            <p class="dt-a"><span class="dt-tag">검증</span>상태 전환, 안전 신호, 카메라 API와 UI를 포함한 11개 테스트 파일의 118개 테스트 및 TypeScript typecheck 수행</p>
+            <p class="dt-w"><span class="dt-tag alt">결과</span>전체 테스트와 타입 검사를 통과해 주요 사용자 흐름의 회귀 여부를 확인</p>
+          </div><div class="dt-card">
+            <p class="dt-q">현재 MVP의 범위</p>
+            <p class="dt-a"><span class="dt-tag">한계</span>세션은 서버 메모리에 저장하고 실시간 상태 갱신은 polling 방식으로 구현</p>
+            <p class="dt-w"><span class="dt-tag alt">개선</span>영속 저장소, WebSocket 또는 SSE, 사용자 권한과 의료 데이터 보안을 후속 과제로 정리</p>
+          </div></div>
+        </div>
       </div>
-      <div class="case-col">
-        <h4 class="case-h">기술적 의사결정</h4>
-        <div class="dt-grid"><div class="dt-card">
-          <p class="dt-q">M2 추천 로직을 룰베이스로 분리</p>
-          <p class="dt-a"><span class="dt-tag">결정</span>실제 데이터에 일부 훈련 파라미터 컬럼과 학습 라벨이 부족한 구간은 딥러닝 대신 기준 파형·BWS·대칭 지표 기반 룰로 추천</p>
-          <p class="dt-w"><span class="dt-tag alt">이유</span>제한된 데이터에서 근거 없는 예측을 만들기보다 로봇이 실제 조절할 수 있는 범위와 판단 근거를 명시하기 위해</p>
-        </div><div class="dt-card">
-          <p class="dt-q">환자 극단값을 삭제하지 않고 품질 플래그로 관리</p>
-          <p class="dt-a"><span class="dt-tag">결정</span>결측·음수 GRF·측정 오류는 구분하되 환자 상태일 수 있는 극단값은 보존하고 별도 품질 플래그를 부여</p>
-          <p class="dt-w"><span class="dt-tag alt">이유</span>실제 이상 보행을 단순 이상치로 제거해 환자 특성을 잃지 않도록 하기 위해</p>
-        </div><div class="dt-card">
-          <p class="dt-q">확정 진단이 아닌 추이 보조 모델로 정의</p>
-          <p class="dt-a"><span class="dt-tag">결정</span>reference distance 기반 pseudo-label의 한계를 명시하고 confidence와 coverage를 함께 제공</p>
-          <p class="dt-w"><span class="dt-tag alt">이유</span>임상 gold label이 부족한 상태에서 모든 결과를 동일한 확신도로 제시하지 않기 위해</p>
-        </div></div>
-        <h4 class="case-h" style="margin-top:1.6rem;">검증 및 확장</h4>
-        <div class="dt-grid"><div class="dt-card">
-          <p class="dt-q">환자 세션 추이 모델 성능 비교</p>
-          <p class="dt-a"><span class="dt-tag">검증</span>TCN·GRU 기반 모델의 전체 Accuracy 76.73%, Balanced Accuracy 70.10%를 확인하고 confidence 구간별 coverage를 추가 분석</p>
-          <p class="dt-w"><span class="dt-tag alt">결과</span>confidence 0.60 이상에서는 Coverage 69.53%, Accuracy 89.82%로, 전체 예측과 고신뢰 예측을 구분해 해석</p>
-        </div><div class="dt-card">
-          <p class="dt-q">멀티모달 실시간 연동</p>
-          <p class="dt-a"><span class="dt-tag">구현</span>로봇 numeric, rPPG, 전·후방 카메라 결과를 같은 step으로 정렬하고 TCP 서버에서 상태·부하·피로·위험 점수를 통합</p>
-          <p class="dt-w"><span class="dt-tag alt">결과</span>일부 모듈이 누락돼도 실행을 계속하는 예외 처리와 CSV replay 도구를 구성해 현장 연동 전 반복 검증 가능</p>
-        </div></div>
-      </div>
-    </div>
     </details>
   </article>
 
   <article class="project reveal" id="project-04">
     <div class="project-head">
       <span class="project-num">04</span>
+      <div class="project-headtext">
+        <p class="eyebrow">AI Research · Data Pipeline</p>
+        <h3 class="project-title">보행 재활 로봇 환자 맞춤형 AI</h3>
+        <p class="project-meta">2026.04 — 2026.09 · 학부연구생 산학협력 과제</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">Deep Learning</span><span class="chip">Streamlit</span><span class="chip">Multimodal AI</span></div>
+      </div>
+    </div>
+    <p class="project-overview">보행 재활 로봇의 센서 데이터를 분석해 사용자별 보행 변화를 파악하고 맞춤형 훈련을 보조하는 산학협력 프로젝트. 데이터 전처리부터 모델 실험, 분석 UI와 현장 검증 환경까지 연결했습니다.</p>
+    <details class="case-toggle">
+      <summary>Case study 자세히 보기<span class="chev">→</span></summary>
+
+    <div class="case">
+      <div class="case-col">
+        <h4 class="case-h">담당 기능</h4>
+        <ul class="case-list"><li>비식별 보행 센서 데이터의 결측치와 품질을 점검하는 전처리 파이프라인 구성</li><li>사용자별 보행 변화와 훈련 추이를 분석하기 위한 규칙 기반 방식과 딥러닝 모델 실험</li><li>여러 센서 정보를 함께 확인하는 멀티모달 분석 흐름 구성</li><li>연구 결과 확인용 Streamlit UI와 현장 검증 환경 제작</li></ul>
+      </div>
+      <div class="case-col">
+        <h4 class="case-h">기술적 의사결정</h4>
+        <div class="dt-grid"><div class="dt-card">
+          <p class="dt-q">데이터 조건에 따라 분석 방식을 분리</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>학습에 필요한 정보가 충분한 경우와 그렇지 않은 경우를 구분해 규칙 기반 방식과 모델 기반 방식을 함께 검토</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>제한된 데이터에서 근거 없는 결과를 만들기보다 판단 기준과 적용 범위를 명확히 하기 위해</p>
+        </div><div class="dt-card">
+          <p class="dt-q">이상값과 데이터 품질 문제를 구분</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>측정 오류로 판단되는 값과 사용자 특성에서 발생할 수 있는 값을 분리해 관리</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>일괄적인 이상치 제거로 실제 보행 특성이 사라지는 것을 줄이기 위해</p>
+        </div><div class="dt-card">
+          <p class="dt-q">결과를 진단이 아닌 훈련 보조 정보로 정의</p>
+          <p class="dt-a"><span class="dt-tag">결정</span>모델 결과와 함께 데이터 품질과 결과 해석 시 주의할 점을 표시</p>
+          <p class="dt-w"><span class="dt-tag alt">이유</span>연구 단계의 결과가 실제 진단처럼 받아들여지지 않도록 활용 범위를 구분하기 위해</p>
+        </div></div>
+        <h4 class="case-h" style="margin-top:1.6rem;">공개 범위</h4>
+        <div class="dt-grid"><div class="dt-card">
+          <p class="dt-q">산학협력 과제 보안 준수</p>
+          <p class="dt-a"><span class="dt-tag">범위</span>담당 업무와 사용 기술은 공개하되 원본 데이터 규모, 세부 모델 구조, 성능 지표와 연동 규격은 공개하지 않습니다.</p>
+          <p class="dt-w"><span class="dt-tag alt">안내</span>면접에서는 공개 가능한 범위 안에서 문제 해결 과정과 맡은 역할을 설명드릴 수 있습니다.</p>
+        </div></div>
+      </div>
+    </div>
+    </details>
+  </article>
+
+  <article class="project reveal" id="project-05">
+    <div class="project-head">
+      <span class="project-num">05</span>
       <div class="project-headtext">
         <p class="eyebrow">Backend</p>
         <h3 class="project-title">우리의 하루를 더 특별하게, 누피(NUPI)</h3>
@@ -709,9 +761,9 @@
     </details>
   </article>
 
-  <article class="project reveal" id="project-05">
+  <article class="project reveal" id="project-06">
     <div class="project-head">
-      <span class="project-num">05</span>
+      <span class="project-num">06</span>
       <div class="project-headtext">
         <p class="eyebrow">Backend</p>
         <h3 class="project-title">디지털 타임캡슐 서비스, Echo</h3>
